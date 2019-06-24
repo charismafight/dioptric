@@ -1,1 +1,3 @@
 # 屈光数据工具
+
+pyqt使用pycharm的tools里qtdesigner作为可视化工具
