@@ -89,4 +89,7 @@
  </widget>
  <resources/>
  <connections/>
+ <slots>
+  <slot>add_case()</slot>
+ </slots>
 </ui>
