@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>812</width>
-    <height>547</height>
+    <height>552</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -33,7 +33,7 @@
      <set>QAbstractItemView::NoEditTriggers</set>
     </property>
     <attribute name="verticalHeaderDefaultSectionSize">
-     <number>50</number>
+     <number>25</number>
     </attribute>
     <column>
      <property name="text">
@@ -88,8 +88,25 @@
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>btnAdd</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>show_add_case_from()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>758</x>
+     <y>510</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>711</x>
+     <y>514</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
  <slots>
-  <slot>add_case()</slot>
+  <slot>show_add_case_from()</slot>
  </slots>
 </ui>

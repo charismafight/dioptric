@@ -7,12 +7,10 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtWidgets import QDialog
-from case import Ui_formAdd
-from d_main import D_MainWindow
+from PyQt5.QtWidgets import QMainWindow
 
 
-class Ui_MainWindow(D_MainWindow):
+class Ui_MainWindow(QMainWindow):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(812, 547)
@@ -36,7 +34,7 @@ class Ui_MainWindow(D_MainWindow):
         self.tableWidget.setHorizontalHeaderItem(3, item)
         item = QtWidgets.QTableWidgetItem()
         self.tableWidget.setHorizontalHeaderItem(4, item)
-        self.tableWidget.verticalHeader().setDefaultSectionSize(50)
+        self.tableWidget.verticalHeader().setDefaultSectionSize(25)
         self.btnAdd = QtWidgets.QPushButton(self.centralwidget)
         self.btnAdd.setGeometry(QtCore.QRect(730, 480, 81, 23))
         self.btnAdd.setObjectName("btnAdd")
@@ -50,7 +48,7 @@ class Ui_MainWindow(D_MainWindow):
         MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
-        self.btnAdd.clicked.connect(self.show_add_case_from)
+        self.btnAdd.clicked.connect(MainWindow.show_add_case_from)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
